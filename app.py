@@ -104,6 +104,10 @@ Answer:"""
     )
 
 chain = load_chain()
+st.title("🧠 GPT Chatbot")  # ✅ top-level title
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
 # Chat state
 if "messages" not in st.session_state:

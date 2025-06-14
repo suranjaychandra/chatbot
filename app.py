@@ -104,16 +104,8 @@ Answer:"""
     )
 
 chain = load_chain()
-st.title("🧠 GPT Chatbot")
+st.title("🤖 My GPT Chatbot")
 
-# ✅ Always check and initialize early
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-# Now use it safely
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
 
 # Chat state
 if "messages" not in st.session_state:
